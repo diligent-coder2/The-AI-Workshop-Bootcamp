@@ -42,6 +42,8 @@ SELECT *
 -- Task: How many patients are registered in total?
 -- YOUR ANSWER:
 
+SELECT COUNT (PatientID) AS total_patients
+FROM patients;
 
 -- -----------------------------------------------
 -- EXERCISE 5: GROUP BY
@@ -49,6 +51,9 @@ SELECT *
 -- Task: Count how many patients are registered with each GP
 -- YOUR ANSWER:
 
+SELECT RegisteredGP, COUNT (*) AS patients_reg_withGP
+FROM patients
+GROUP BY RegisteredGP;
 
 -- -----------------------------------------------
 -- EXERCISE 6: COUNT with GROUP BY on admissions
